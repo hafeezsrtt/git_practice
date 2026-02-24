@@ -1,6 +1,10 @@
 name: 02-workfloe-events
 
-on: push
+on: 
+  push:
+  pull_request:
+  schedule:
+    - cron: '*/5 * * * *' # every day at midnight
 
 jobs:
     echo:
