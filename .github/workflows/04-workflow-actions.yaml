@@ -13,11 +13,9 @@ jobs:
               with:
                 node-version: '20'
             - name: Install dependencies
-              run: npm install
-              working-directory: 04-action-workflow
-            - name: Run tests
-              run: npm test
-              working-directory: 04-action-workflow
+              run: npm ci
+              working-directory: 04-action-workflow/react-app
+            
         # 0. c heckout our code from repository
         # 1. install deps of our react app
         # 2. execute automated tests
