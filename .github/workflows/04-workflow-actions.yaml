@@ -1,21 +1,23 @@
 name: 04-workflow-actions
 
-"on": push
+on: push
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v3
-            - name: Setup Node
-              uses: actions/setup-node@v3
-              with:
-                node-version: '20'
-            - name: Install dependencies
-              run: npm install
-            - name: Run tests
-              run: npm test
-        # 0. c heckout our code from repository
-        # 1. install deps of our react app
-        # 2. execute automated tests
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: react-app   # adjust if your package.json is here
+
+      - name: Run tests
+        run: npm test
+        working-directory: react-app
