@@ -1,0 +1,1 @@
+{"name": "git-practice", "version": "1.0.0", "description": "Git practice project", "main": "index.js", "scripts": {"test": "echo \"Error: no test specified\" && exit 1"}, "keywords": [], "author": "", "license": "ISC"}
